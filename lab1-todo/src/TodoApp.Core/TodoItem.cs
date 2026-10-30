@@ -28,7 +28,7 @@ public sealed class TodoItem
     {
         if (string.IsNullOrWhiteSpace(title))
         {
-            throw new ArgumentException("Название задачи не может быть пустым.", nameof(title));
+            throw new ArgumentException("Название задачи не может быть пустым.");
         }
 
         _title = title.Trim();
@@ -39,7 +39,7 @@ public sealed class TodoItem
     {
         if (!Enum.IsDefined(priority))
         {
-            throw new ArgumentOutOfRangeException(nameof(priority), priority, "Неизвестный приоритет.");
+            throw new ArgumentOutOfRangeException(nameof(priority), "Неизвестный приоритет.");
         }
 
         _priority = priority;
